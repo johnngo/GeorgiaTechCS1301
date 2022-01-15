@@ -1,0 +1,44 @@
+mystery_int = 50
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Add some code below that will find and print the sum of
+#every odd number between 0 and mystery_int. This time,
+#exclude the bounds (e.g. if mystery_int was 51, add the odds
+#from 1 to 49, but not 51).
+#
+#Hint: There are multiple ways to do this!
+
+
+#Add your code here!
+
+sum = 0
+
+for i in range(1, mystery_int,1):
+    if i % 2 == 1:
+#       print(i)
+        sum +=i
+print(sum)
+
+#alternative
+#Here's the solution using the step argument:
+
+current_sum = 0
+for i in range(1, mystery_int, 2):
+    current_sum += i
+print(current_sum)
+
+
+#Here's the solution using the modulus operator:
+
+current_sum = 0
+for i in range(1, mystery_int):
+    if i % 2 == 1:
+        current_sum += i
+print(current_sum)
+
+#Notice that because we want to sum the numbers from 1 to
+#mystery_int *excluding* mystery_int itself, both our
+#loops run to mystery_int instead of mystery_int + 1.
