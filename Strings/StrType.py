@@ -26,18 +26,18 @@
 
 
 #Write your function here!
-def string_type(str):
-    if str == "":
+def string_type(input_string):
+    if input_string == "":
         return "empty"
-    elif len(str) == 1:
+    elif len(input_string) == 1:
         return "character"
-    elif len(str) > 1 and " " not in str:
+    elif len(input_string) > 1 and " " not in input_string:
         return "word"
-    elif " " in str and str.count(".") == 1 or str.count("!") == 1:
+    elif " " in input_string and input_string.count(".") == 1 or input_string.count("!") == 1:
         return "sentence"
-    elif " " in str and str.count(".") > 1 and "\n" not in str:
+    elif " " in input_string and input_string.count(".") > 1 and "\n" not in input_string:
         return "paragraph"
-    elif "\n" in str:
+    elif "\n" in input_string:
         return "page"
 
 
