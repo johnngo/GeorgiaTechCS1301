@@ -76,7 +76,7 @@ def in_parentheses(sentence):
             #and we can return the substring from
             #the index of ( to the index of ):
             
-            return sentence[sentence.find("(") : sentence.find(")")]
+            return sentence[sentence.find("(")+1 : sentence.find(")")]
     
     #The only way to get to this next line is if the return
     #on line 25 did not run, so we can return a blank
